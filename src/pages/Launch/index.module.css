@@ -1,0 +1,104 @@
+.container{
+    width: 100%;
+    height: 100%;
+}
+
+.top{
+    float: left;
+    width: 100%;
+    height: 50px;
+    background-color: #428bca;
+}
+
+.center{
+    float: left;
+    width: 100%;
+    height: calc(100% - 100px);
+}
+
+.map{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.loading{
+    position: absolute;
+    left: calc((100% - 300px) / 2);
+    width: 300px;
+    top: 30%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: black;
+    opacity: 0.8;
+}
+
+.showList{
+    position: absolute;
+    left: 0;
+    top: 5%;
+    width: 300px;
+    height: 90%;
+    background-color: black;
+    opacity: 0.8;
+    z-index: 2;
+    overflow: auto;
+}
+
+.showList_close{
+    float: right;
+    width: 30px;
+    height: 20px;
+    right: 20px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+
+}
+
+.showList_item{
+    float: left;
+    margin-top: 10px;
+    margin-left: 4%;
+    width: 92%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    cursor: pointer;
+}
+
+.showList_item_left{
+    width: 50px;
+    height: 50px;
+}
+
+.showList_item_right{
+    margin-left: 5px;
+    margin-top: 8px;
+    width: 250px;
+    height: 40px;
+    color: white;
+    font-size: 7px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.bottom{
+    float: left;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+.bottomSpan{
+    width: 240px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 15px;
+}
