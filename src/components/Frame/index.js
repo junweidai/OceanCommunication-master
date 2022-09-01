@@ -3,10 +3,6 @@ import { withRouter } from 'react-router-dom'
 import { Layout, Menu, Breadcrumb, Button, BackTop } from 'antd';
 import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
 import logo from './logo.png';
-import logo1 from './logo1.png';
-import logo2 from './logo2.png';
-import logo3 from './logo3.png';
-import logo4 from './logo4.png';
 import {adminRoutes} from '../../routes'
 import { withConfigConsumer } from 'antd/lib/config-provider/context';
 import Title from 'antd/lib/skeleton/Title';
@@ -25,21 +21,22 @@ function index(props) {
       </div>
     </Header>
           <Layout>
-              <Sider width={240} className="site-layout-background" style={{ marginTop:0 }}>
+              <Sider width={100} className="site-layout-background" style={{ marginTop:0 }}>
         <Menu
           mode="inline"
           defaultSelectedKeys={['1']}
           defaultOpenKeys={['sub1']}
                       style={{
-                          height: '100%', background:"white",
+                          height: '100%', background: "white", width:'100%',
                  borderRight: 0
            }}>
               {routes.map(route => {
                   return (
                       <>
                     <Menu.Item 
-                          key={route.path}
-                          onClick={p => props.history.push(p.key)}
+                              key={route.path}
+                              onClick={p => props.history.push(p.key)}
+                              style={{ margin: '30px 0px', marginTop: '5px'}}
                           >                          
                               { route.logo}
                           </Menu.Item>
@@ -50,12 +47,12 @@ function index(props) {
       </Sider>
       <Layout
         style={{
-          padding: '0 24px 24px',
+          padding: '0 0px 24px',
         }}
       >
         <Breadcrumb
-          style={{
-            margin: '15px',
+                      style={{
+                          marginTop: '5px', marginLeft: 0, marginRight:50
           }}
         >
           {/* <Breadcrumb.Item>Home</Breadcrumb.Item>
@@ -65,8 +62,8 @@ function index(props) {
         <Content
           className="site-layout-background"
           style={{
-            padding: 0,
-            margin: 0,
+            padding:0,
+            margin:'0px',
             minHeight: 280,
             background: "white"
           }}

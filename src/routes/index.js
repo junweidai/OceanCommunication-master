@@ -11,6 +11,10 @@ import Interaction from '../pages/Interaction'
 import FFT from '../pages/FFT'
 import HotChart from '../pages/HotChart'
 import logo1 from './logo1.png'
+import logo2 from './logo2.png'
+import logo3 from './logo3.png'
+import logo4 from './logo4.png'
+import ReactTooltip from 'react-tooltip';
 
 export const mainRoutes = [
     {
@@ -34,7 +38,7 @@ export const adminRoutes = [
         exact: true,
         isShow: true,
         icon: 'shop',
-        logo: logo1
+        logo: <><img src={logo1} style={{ height: "45px", width: "45px" }} data-tip="发射端与系统" data-type={'light'} data-place={"right" }></img><ReactTooltip /></>
     },
     {
         path: '/admin/receipt',
@@ -42,7 +46,8 @@ export const adminRoutes = [
         component: Receipt,
         exact: true,
         isShow: true,
-        icon: 'shop'
+        icon: 'shop',
+        logo: <><img src={logo2} style={{ height: "45px", width: "45px" }} data-tip="接收分析" data-type={'light'} data-place={"right"}></img><ReactTooltip /></>
     },
     {
         path: '/admin/hotChart',
@@ -50,7 +55,8 @@ export const adminRoutes = [
         component: HotChart,
         exact: true,
         isShow: true,
-        icon: 'shop'
+        icon: 'shop',
+        logo: <><img src={logo3} style={{ height: "45px", width: "45px" }} data-tip="计算分析" data-type={'light'} data-place={"right"} ></img><ReactTooltip /></>
     },
 
     {
@@ -59,6 +65,7 @@ export const adminRoutes = [
         component: Interaction,
         exact: true,
         isShow: true,
-        icon: 'shop'
+        icon: 'shop',
+        logo: <><img src={logo4} style={{ height: "45px", width: "45px" }} data-tip="后台数据与交互管理" data-type={'light'} data-place={"right"}></img><ReactTooltip /></>
     },
 ]
